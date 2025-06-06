@@ -58,7 +58,7 @@
 							Agimos rapidamente, valorizando o que era descarte para uma cidade
 							mais segura e sustentável.
 						</p>
-						<button>
+						<button id="btn-ver-mais">
 							Quem somos
 							<img src="" alt="" />
 						</button>
@@ -116,25 +116,15 @@
 						</figure>
 					</div>
 				</div>
-
-				<ul>
-					<li>
-						<p>
-							Nosso aplicativo móvel intuitivo permite cidadãos enviarem dados
-							com geolocalização e receberem alertas. Sensores IoT coletam dados
-							de rios.
-						</p>
-					</li>
-					<li>
-						<p class="p1">
-							Uma infraestrutura de nuvem com IA processa dados de sensores e
-							usuários para prever riscos e otimizar equipes.
-						</p>
-					</li>
-					<li class="li-ver-mais">
-						<button id="btn-ver-mais">Ler mais</button>
-					</li>
-				</ul>
+				<p>
+					Nosso aplicativo móvel intuitivo permite cidadãos enviarem dados com
+					geolocalização e receberem alertas. Sensores IoT coletam dados de
+					rios.
+				</p>
+				<p>
+					Uma infraestrutura de nuvem com IA processa dados de sensores e
+					usuários para prever riscos e otimizar equipes.
+				</p>
 			</div>
 		</section>
 		<section class="objetivos">
@@ -144,35 +134,60 @@
 			</div>
 			<div class="lista-objetivos">
 				<ul>
-					<li><p>Revolucionar a Gestão de Resíduos</p></li>
-					<li><p>Empoderar Comunidades</p></li>
-					<li><p>Construir Cidades Mais Resilientes e Sustentáveis</p></li>
-					<li><p>Proteger Vidas e Patrimônios</p></li>
-					<li><p>Ser um Modelo de Autossustentabilidade</p></li>
+					<li>
+						<figure>
+							<img src="assets/img/objetivos/objetivos (1).svg" alt="" />
+							<figcaption>Revolucionar a Gestão de Resíduos</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="assets/img/objetivos/objetivos (2).svg" alt="" />
+							<figcaption>Empoderar Comunidades</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="assets/img/objetivos/objetivos (3).svg" alt="" />
+							<figcaption>
+								Construir Cidades Mais Resilientes e Sustentáveis
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="assets/img/objetivos/objetivos (4).svg" alt="" />
+							<figcaption>Proteger Vidas e Patrimônios</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="assets/img/objetivos/objetivos (5).svg" alt="" />
+							<figcaption>Ser um Modelo de Autossustentabilidade</figcaption>
+						</figure>
+					</li>
 				</ul>
 			</div>
 		</section>
 		<section class="publico">
-			<div class="interno">
-				<div class="imagem">
-					<div class="titulo">
-						<h1>PÚBLICO</h1>
-					</div>
-					<figure>
-						<img
-							src="assets/img/publico.jpg"
-							alt="garotos de comunidade sorrindo"
-						/>
-					</figure>
+			<div class="imagem">
+				<div class="titulo">
+					<h1>PÚBLICO</h1>
 				</div>
-
-				<p>
-					Moradores de áreas de risco e comunidades com drenagem deficiente
-					sofrem diretamente com enchentes e lixo. Para eles, o alerta precoce é
-					crucial. Cidadãos engajados e famílias buscando segurança encontram em
-					nosso aplicativo um canal para agir, monitorar e receber avisos.
-				</p>
+				<figure>
+					<img
+						src="assets/img/publico.jpg"
+						alt="garotos de comunidade sorrindo"
+					/>
+				</figure>
 			</div>
+
+			<p>
+				Moradores de áreas de risco e comunidades com drenagem deficiente sofrem
+				diretamente com enchentes e lixo. Para eles, o alerta precoce é crucial.
+				Cidadãos engajados e famílias buscando segurança encontram em nosso
+				aplicativo um canal para agir, monitorar e receber avisos.
+			</p>
 		</section>
 		<hr />
 		<section class="solucao">
@@ -190,23 +205,25 @@
 					e engaja cidadãos ativamente.
 				</p>
 			</div>
+			<div class="solucao-frases">
+				<div class="circulo-container circulo-1">
+					<div class="circulo-responsivo">
+						<h1>Cidades Mais Seguras e Resilientes Contra Enchentes</h1>
+					</div>
+				</div>
+				<div class="circulo-container circulo-2">
+					<div class="circulo-responsivo">
+						<h1>Gestão de Residuos Eficiente e Sustentável</h1>
+					</div>
+				</div>
 
-			<div class="circulo-container circulo-1">
-				<div class="circulo-responsivo">
-					<h1>Cidades Mais Seguras e Resilientes Contra Enchentes</h1>
-				</div>
-			</div>
-			<div class="circulo-container circulo-2">
-				<div class="circulo-responsivo">
-					<h1>Gestão de Residuos Eficiente e Sustentável</h1>
+				<div class="circulo-container circulo-3">
+					<div class="circulo-responsivo">
+						<h1>Engajamento Cidadão e Consciência Ambiental</h1>
+					</div>
 				</div>
 			</div>
 
-			<div class="circulo-container circulo-3">
-				<div class="circulo-responsivo">
-					<h1>Engajamento Cidadão e Consciência Ambiental</h1>
-				</div>
-			</div>
 			<figure class="imagem">
 				<img src="assets/img/solucao.jpg" alt="garotos jogando lixo" />
 			</figure>
@@ -253,32 +270,11 @@
 			<ul>
 				<li class="fechar-dropdown" id="close-dropdown">
 					<p>Fechar</p>
-					<figure>
+					<figure class="fechar-drop">
 						<img src="assets/img/cross.png" alt="" />
 					</figure>
 				</li>
-				<li>
-					<p>
-						Complementarmente, utilizamos uma rede de sensores inteligentes
-						baseados em IoT (Internet das Coisas). Dispositivos estrategicamente
-						posicionados em rios, córregos e pontos críticos coletam dados
-						vitais sobre níveis de água, fluxo e condições ambientais. Essa
-						coleta de dados é contínua e em tempo real, transmitindo informações
-						cruciais para nossa plataforma.
-					</p>
-				</li>
-				<li>
-					<p>
-						Toda essa inteligência é processada em uma robusta infraestrutura de
-						nuvem, que garante a escalabilidade e a disponibilidade dos nossos
-						serviços. Aqui, algoritmos avançados e inteligência artificial (IA)
-						entram em ação. Eles analisam os dados dos sensores e as informações
-						enviadas pelos usuários, detectando padrões, prevendo riscos de
-						enchente e identificando os pontos de maior necessidade para a
-						coleta de lixo. Essa análise inteligente é o que permite disparar
-						alertas precisos e direcionar nossas equipes de forma otimizada.
-					</p>
-				</li>
+				<li></li>
 			</ul>
 		</div>
 		<script src="assets/script.js"></script>
