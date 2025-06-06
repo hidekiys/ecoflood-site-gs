@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="assets/style.css" />
 	</head>
 	<body>
-		<header>
+		<header id="main-header">
 			<figure class="open-menu" id="open-menu">
 				<img src="assets/img/menu-bar.png" alt="" />
 			</figure>
@@ -58,10 +58,7 @@
 							Agimos rapidamente, valorizando o que era descarte para uma cidade
 							mais segura e sustentável.
 						</p>
-						<button id="btn-ver-mais">
-							Quem somos
-							<img src="" alt="" />
-						</button>
+						<button id="btn-ver-mais">Fazer um quiz</button>
 					</div>
 				</div>
 			</div>
@@ -267,15 +264,26 @@
 			</div>
 		</footer>
 		<div id="dropdown" class="dropdown">
-			<ul>
-				<li class="fechar-dropdown" id="close-dropdown">
-					<p>Fechar</p>
-					<figure class="fechar-drop">
-						<img src="assets/img/cross.png" alt="" />
-					</figure>
-				</li>
-				<li></li>
-			</ul>
+			<div class="fechar-dropdown" id="close-dropdown">
+				<p>Fechar</p>
+				<figure class="fechar-drop">
+					<img src="assets/img/cross.png" alt="" />
+				</figure>
+			</div>
+			<form class="quiz">
+				<p id="pergunta"></p>
+				<input type="radio" name="quiz" id="resposta-a" value="a" />
+				<label for="resposta-a" id="label-a"> </label>
+				<input type="radio" name="quiz" id="resposta-b" value="b" />
+				<label for="resposta-b" id="label-b"> </label>
+				<input type="radio" name="quiz" id="resposta-c" value="c" />
+				<label for="resposta-c" id="label-c"> </label>
+				<input type="radio" name="quiz" id="resposta-d" value="d" />
+				<label for="resposta-d" id="label-d"> </label>
+				<div>
+					<button id="quiz-proximo"></button>
+				</div>
+			</form>
 		</div>
 		<script src="assets/script.js"></script>
 	</body>
