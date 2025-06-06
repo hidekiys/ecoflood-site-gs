@@ -434,3 +434,67 @@ footer * ul {
 footer * {
 	overflow-y: hidden;
 }
+.fechar-mobile {
+	display: none;
+}
+
+@media (max-width: 450px) {
+	.fechar-mobile {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: end;
+		gap: 0.5em;
+	}
+	.fechar-mobile figure {
+		width: 8%;
+	}
+
+	.fechar-mobile img {
+		max-width: 100%;
+	}
+	header nav ul {
+		flex-direction: column;
+		justify-content: baseline;
+		align-items: baseline;
+		gap: 1em;
+	}
+	header nav ul * {
+		color: #2c2c2c;
+	}
+	.open-menu {
+		width: 8%;
+		background-color: white;
+		border-radius: 50%;
+		height: auto;
+		border: none;
+		position: fixed;
+		right: 2em;
+		top: 1em;
+	}
+	.open-menu img {
+		padding: 0.2em;
+		max-width: 100%;
+	}
+	header nav {
+		padding: 0;
+		position: fixed;
+		overflow: hidden;
+		top: 0;
+		right: 0;
+		width: 0;
+		background-color: white;
+		height: 100dvh;
+		transition: 0.6s;
+	}
+	.active {
+		width: 40%;
+		padding: 1rem;
+	}
+
+	.fechado {
+		transform: rotate(60deg) scale(0.1);
+		opacity: 0;
+		transition: 0.6s;
+	}
+}
