@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&display=swap");
+:root {
+	--cor-primaria: #539c3a;
+	--cor-secundaria: #6bb369;
+	--cor-terceira: #a7beae;
+	--cor-quarta: #d5eadb;
+	--cor-cinza-suporte: #2c2c2c;
+}
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Lato", "sans-serif";
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+ul {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	padding-block: 0.5rem;
+}
+
+ul * {
+	list-style: none;
+	font-style: normal;
+	text-decoration: none;
+	color: white;
+	font-weight: 280;
+}
+header {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+p {
+	font-family: "Lato", "sans-serif";
+	font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+	font-weight: 300;
+}
+
+.background {
+	background-image: url("/assets/img/banner.jpg");
+	height: 100%;
+	top: 0;
+	width: 100%;
+	position: absolute;
+	background-size: cover;
+	z-index: -3;
+}
+.degrade-blur {
+	z-index: -1;
+	top: 0;
+	position: absolute;
+	width: 100%;
+	height: 40rem;
+	backdrop-filter: blur(1rem);
+	background-color: rgba(0, 0, 0, 0.5);
+	-webkit-mask-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(rgba(0, 0, 0, 1)),
+		to(rgba(0, 0, 0, 0))
+	);
+}
+.degrade-blur-bottom {
+	z-index: -2;
+	position: relative;
+	width: 100%;
+	height: 30rem;
+	backdrop-filter: blur(1rem);
+	background-color: rgba(255, 255, 255, 1);
+	-webkit-mask-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		from(rgb(255, 255, 255)),
+		to(rgba(0, 0, 0, 0))
+	);
+	-webkit-mask-size: 300% 50%;
+}
+
+#inicio-1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5rem;
+}
+#inicio-2 {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+#inicio-2 h1 {
+	font-size: 3rem;
+	color: white;
+}
+#inicio-3 {
+	width: 20rem;
+}
+#inicio-3 p {
+	color: white;
+	font-weight: 250;
+	font-size: large;
+}
+#inicio-3 button {
+	padding-inline: 2rem;
+	padding-block: 0.4rem;
+	border-radius: 1rem;
+	border: 0;
+	background-color: white;
+	color: var(--cor-primaria);
+	margin-top: 1.5rem;
+}
+.logo {
+	margin-top: 5rem;
+	width: 35rem;
+}
+.inicio {
+	height: 42rem;
+	overflow-y: hidden;
+}
+.oproblema {
+	width: 100%;
+}
+.oproblema h1 {
+	background-color: white;
+	margin: -0.5rem;
+	font: "Lexend";
+	font-size: 15.5vw;
+	white-space: nowrap;
+}
+
+.oproblema .interno {
+	display: flex;
+	gap: 2rem;
+	margin-inline: 2rem;
+}
+.oproblema .paragrafos * {
+	text-indent: 2em;
+	font-weight: 300;
+	font-size: x-large;
+}
+.oproblema img {
+	width: 70rem;
+	object-fit: cover;
+}
+
+.tecnologias {
+	margin-top: 9rem;
+	margin-inline: 2rem;
+}
+.tecnologias .interno {
+	display: flex;
+	justify-content: space-between;
+}
+.tecnologias h1 {
+	font-family: "Lexend", "sans-serif";
+	font-size: 4rem;
+}
+.tecnologias .imagem {
+	width: 30rem;
+}
+.tecnologias img {
+	max-width: 100%;
+	object-position: center;
+	object-fit: cover;
+}
+.tecnologias ul {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-left: 2rem;
+}
+.tecnologias .p1 {
+	margin-left: 5rem;
+}
+.tecnologias ul * {
+	color: #2c2c2c;
+	font-weight: 300;
+	font-size: clamp(0.5rem, 2.5vw, 1.3rem);
+}
+.tecnologias .imagem img {
+	position: relative;
+	z-index: 1;
+}
+.tecnologias .imagem .degrade {
+	background: #539c3a;
+	background: radial-gradient(closest-side, rgba(83, 156, 58, 1), white);
+	border-radius: 50%;
+	width: 20rem;
+	height: 20rem;
+	position: absolute;
+	top: 120rem;
+	left: -5rem;
+	z-index: -2;
+}
+.objetivos h1 {
+	font-size: 4rem;
+}
+.objetivos .titulo {
+	display: flex;
+	width: 100%;
+	justify-content: end;
+}
+.objetivos h2 {
+	color: #6bb369;
+}
+
+.objetivos {
+	margin-top: 10rem;
+	margin-inline: 2rem;
+}
+
+.objetivos .grid {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto auto;
+}
+.objetivos .grid {
+	border: solid 0.1px #2c2c2c;
+}
+.objetivos .grid div {
+	padding: 2rem;
+}
+.objetivos .grid .grid-1 {
+	grid-column: 1 / span 2;
+	border-right: solid 0.1px #2c2c2c;
+	border-bottom: solid 0.1px #2c2c2c;
+}
+.objetivos .grid .grid-2 {
+	grid-column: 1 / 2;
+	border-right: solid 0.1px #2c2c2c;
+}
+.objetivos .grid .grid-3 {
+	grid-column: 2 / 3;
+	border-right: solid 0.1px #2c2c2c;
+}
+.objetivos .grid .grid-4 {
+	display: flex;
+	align-items: center;
+	grid-row: 1/3;
+	grid-column: 3 / 3;
+}
+.objetivos .grid .grid-5 {
+	grid-column: 1 / 4;
+	border-top: solid 0.1px #2c2c2c;
+}
+.publico {
+	margin-top: 8rem;
+	margin-inline: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.publico .interno {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.publico .imagem figure img {
+	max-width: 100%;
+	position: relative;
+}
+
+.publico .interno p {
+	padding: 1rem;
+	border: solid 0.5px;
+	border-radius: 1rem;
+	max-width: 40%;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	margin-top: 15dvh;
+	font-size: clamp(0.2rem, 1.5vw, 1.1rem);
+}
+.publico p {
+	font-size: 2vw;
+}
+.publico .imagem figure {
+	width: 50vw;
+}
+.publico .titulo h1 {
+	font-family: "Lexend", "sans-serif";
+	font-size: clamp(1rem, 3.5vw, 3rem);
+}
+.publico .titulo {
+	padding: 1rem;
+	background-color: white;
+	border-radius: 2rem;
+	position: relative;
+	z-index: 3;
+	margin-right: 30vw;
+	top: 3rem;
+	right: -32vw;
+}
+
+hr {
+	margin-block: 5rem;
+	border-color: #539c3a;
+}
+
+.solucao {
+	margin-inline: 2rem;
+	height: 180dvh;
+	position: relative;
+	overflow-y: hidden;
+}
+
+.solucao h1 {
+	font-size: clamp(3rem, 8vw, 10rem);
+}
+.solucao .titulo {
+	left: 30%;
+	position: absolute;
+}
+.solucao .beneficios {
+	right: 0;
+	top: 4%;
+	color: var(--cor-quarta);
+	position: absolute;
+	z-index: -1;
+}
+.solucao .paragrafo-1 {
+	position: absolute;
+	top: 11%;
+	width: 50%;
+	left: 40vw;
+	font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+/* --- Estilos para o Contêiner do Círculo --- */
+.circulo-container {
+	position: absolute;
+	margin: 10px; /* Espaço entre os círculos */ /* Para que os círculos fiquem lado a lado se houver espaço */
+	vertical-align: top; /* Alinha eles no topo se estiverem lado a lado */
+}
+
+/* --- Estilos para o Elemento que se Torna o Círculo --- */
+.circulo-responsivo {
+	position: relative; /* FUNDAMENTAL: Define este div como a referência para o h1 absoluto */
+	width: 100%; /* Ocupa 100% da largura do .circulo-container */
+	padding-bottom: 100%; /* A MAGIA: Faz a altura ser igual à largura (1:1 proporção) */
+
+	/* Suas propriedades de estilo de círculo originais (ajustadas) */ /* A cor de fundo que você queria para o círculo */
+	border: solid 0.5px #539c3a; /* Ajustando a borda, se você quiser a mesma cor do fundo */
+	border-radius: 50%;
+	overflow: hidden; /* Garante que o conteúdo que transborda seja cortado */
+	box-sizing: border-box; /* Opcional: faz padding e border serem incluídos na width/height */
+}
+
+/* --- Estilos para o Conteúdo (h1) DENTRO do Círculo --- */
+.circulo-responsivo h1 {
+	position: absolute; /* Essencial: Remove o h1 do fluxo para não afetar a altura do pai */
+	width: 100%;
+	height: 100%; /* Ocupa todo o espaço do .circulo-responsivo */
+
+	/* Para centralizar o texto dentro do h1 (que agora preenche o círculo) */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0; /* Remove margem padrão do h1 */
+	padding: 5%; /* Opcional: padding interno para o texto não colar na borda */
+	box-sizing: border-box; /* Inclui padding no width/height do h1 */
+
+	/* Suas propriedades de fonte originais */
+	color: var(
+		--cor-primaria
+	); /* Cor do texto (originalmente era a cor do fundo do círculo) */
+	font-size: clamp(0.8rem, 2vw, 2rem);
+	text-align: center; /* Opcional: garante que o texto dentro do h1 esteja centralizado */
+}
+
+.circulo-1 {
+	width: clamp(50px, 30%, 500px);
+	top: 10%;
+	left: 1%;
+}
+.circulo-2 {
+	width: clamp(50px, 25%, 450px);
+	top: 35%;
+	left: 12%;
+}
+.circulo-3 {
+	width: clamp(50px, 20%, 400px);
+	top: 35%;
+	left: 35%;
+}
+.solucao .imagem {
+	width: 40%;
+	position: absolute;
+	top: 33%;
+	left: 59%;
+}
+.solucao .imagem img {
+	width: 100%;
+}
+.para-voce {
+	top: 60%;
+	position: absolute;
+	color: var(--cor-quarta);
+	z-index: -1;
+}
+.solucao .paragrafo-2 {
+	position: absolute;
+	top: 65%;
+	width: 55%;
+	font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+footer {
+	width: 100%;
+	height: 13rem;
+	align-items: center;
+	background-color: #6bb369;
+	display: flex;
+	justify-content: space-around;
+}
+footer .contato,
+footer .navegue {
+	display: flex;
+	flex-direction: column;
+}
+footer .container {
+	display: flex;
+	gap: 1em;
+}
+
+footer * ul {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+footer * {
+	overflow-y: hidden;
+}
