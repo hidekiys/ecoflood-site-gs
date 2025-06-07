@@ -6,6 +6,7 @@ const dropdown = document.getElementById("dropdown");
 const closeDropDown = document.getElementById("close-dropdown");
 const header = document.getElementById("main-header");
 const scrollThreshold = 200;
+const formQuiz = document.getElementById("form-quiz");
 const quizPergunta = document.getElementById("pergunta");
 const labelA = document.getElementById("label-a");
 const radioA = document.getElementById("resposta-a");
@@ -18,6 +19,7 @@ const radioD = document.getElementById("resposta-d");
 const quiz = document.getElementsByName("quiz");
 const btnProximo = document.getElementById("quiz-proximo");
 const btnVoltar = document.getElementById("quiz-anterior");
+
 let quizEnchentes = [
 	{
 		id: 1,
@@ -149,6 +151,7 @@ let quizEnchentes = [
 	},
 ];
 let perguntaAtual = 1;
+let pontuacao = 0;
 
 openMenu.addEventListener("click", () => {
 	menu.classList.add("active");
@@ -184,6 +187,10 @@ btnVoltar.addEventListener("click", (e) => {
 	e.preventDefault();
 	voltarPergunta();
 });
+btnTentarNovamente.addEventListener("click", (e) => {
+	e.preventDefault();
+	reiniciar();
+});
 function voltarPergunta() {
 	perguntaAtual--;
 	carregarPergunta();
@@ -209,6 +216,15 @@ function proximaPergunta() {
 		perguntaAtual++;
 		isSelecionado.checked = false;
 		carregarPergunta();
+	} else {
+		quizEnchentes.forEach((pergunta) => {
+			if (pergunta.respostaCorreta === pergunta.respostaSelecionada) {
+				pontuacao++;
+			}
+		});
+		formQuiz.innerHTML = `<h1>Sua pontuação total foi de: ${pontuacao}</h1>
+        <button id="btn-tentar-novamente">Tentar novamente<button/>
+        `;
 	}
 }
 
@@ -237,5 +253,15 @@ function carregarPergunta() {
 			break;
 		default:
 			break;
+	}
+	if (perguntaAtual === 1) {
+		btnVoltar.disabled = true;
+	} else {
+		btnVoltar.disabled = false;
+	}
+	if (perguntaAtual === 10) {
+		btnProximo.innerHTML = "Enviar perguntas";
+	} else {
+		btnProximo.innerHTML = "Próxima pergunta";
 	}
 }
