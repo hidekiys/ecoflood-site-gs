@@ -264,20 +264,13 @@ button:hover,
 	margin-top: 3rem;
 	margin-inline: 2rem;
 	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-}
-.publico .interno {
-	display: flex;
-	align-items: center;
 }
 .publico .imagem figure img {
 	max-width: 100%;
 	position: relative;
 }
 
-.publico .interno p {
-	padding: 1rem;
+.publico p {
 	border-top: solid 0.5px;
 	border-bottom: solid 0.5px;
 	border-right: solid 0.5px;
@@ -301,6 +294,7 @@ button:hover,
 }
 .publico .titulo {
 	padding: 1rem;
+	box-sizing: border-box;
 	background-color: white;
 	border-radius: 2rem;
 	position: relative;
@@ -680,7 +674,6 @@ footer * {
 	}
 	.publico {
 		display: flex;
-		display: flex;
 		align-items: center;
 	}
 	.publico .imagem figure img {
@@ -688,7 +681,7 @@ footer * {
 		position: relative;
 	}
 
-	.publico .interno p {
+	.publico p {
 		padding: 1rem;
 		border-top: solid 0.5px;
 		border-bottom: solid 0.5px;
@@ -705,18 +698,20 @@ footer * {
 
 	.publico .imagem figure {
 		width: 50vw;
-		border-radius: 2rem;
+		border-radius: 2rem 2rem 0 2rem;
 	}
 	.publico .titulo h1 {
 		font-family: "Lexend", "sans-serif";
-		font-size: clamp(1rem, 3.5vw, 3rem);
+		font-size: clamp(2rem, 3vw, 4rem);
 	}
+
 	.publico .titulo {
 		padding: 1rem;
 		background-color: white;
-		border-radius: 2rem;
-		position: relative;
+		border-radius: 2rem 0 0 2rem;
+		position: inherit;
 		z-index: 3;
+		width: 100%;
 		margin-right: 30vw;
 		top: 3rem;
 		right: -32vw;
