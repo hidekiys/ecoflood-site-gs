@@ -272,16 +272,28 @@
 			</div>
 			<form class="quiz">
 				<p id="pergunta"></p>
-				<input type="radio" name="quiz" id="resposta-a" value="a" />
-				<label for="resposta-a" id="label-a"> </label>
-				<input type="radio" name="quiz" id="resposta-b" value="b" />
-				<label for="resposta-b" id="label-b"> </label>
-				<input type="radio" name="quiz" id="resposta-c" value="c" />
-				<label for="resposta-c" id="label-c"> </label>
-				<input type="radio" name="quiz" id="resposta-d" value="d" />
-				<label for="resposta-d" id="label-d"> </label>
+				<ul>
+					<li>
+						<input type="radio" name="quiz" id="resposta-a" value="a" />
+						<label for="resposta-a" id="label-a"> </label>
+					</li>
+					<li>
+						<input type="radio" name="quiz" id="resposta-b" value="b" />
+						<label for="resposta-b" id="label-b"> </label>
+					</li>
+					<li>
+						<input type="radio" name="quiz" id="resposta-c" value="c" />
+						<label for="resposta-c" id="label-c"> </label>
+					</li>
+					<li>
+						<input type="radio" name="quiz" id="resposta-d" value="d" />
+						<label for="resposta-d" id="label-d"> </label>
+					</li>
+				</ul>
+
 				<div>
-					<button id="quiz-proximo"></button>
+					<button id="quiz-anterior">Voltar pergunta</button>
+					<button id="quiz-proximo">Próxima pergunta</button>
 				</div>
 			</form>
 		</div>

@@ -25,7 +25,7 @@ ul * {
 	font-style: normal;
 	text-decoration: none;
 	color: white;
-	font-weight: 280;
+	font-weight: 300;
 }
 header {
 	position: fixed;
@@ -103,7 +103,7 @@ p {
 	font-weight: 250;
 	font-size: large;
 }
-#inicio-3 button {
+button {
 	padding-inline: 2rem;
 	padding-block: 0.4rem;
 	border-radius: 1rem;
@@ -474,6 +474,8 @@ footer * {
 	align-items: center;
 	justify-content: end;
 	gap: 1vw;
+	justify-self: end;
+	margin-right: 2vw;
 }
 .dropdown {
 	display: flex;
@@ -496,6 +498,14 @@ footer * {
 .quiz {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.quiz ul {
+	display: flex;
+	flex-direction: column;
+	gap: 1dvh;
+	align-items: center;
 }
 
 @media (max-width: 450px) {

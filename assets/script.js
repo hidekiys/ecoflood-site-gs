@@ -15,8 +15,10 @@ const labelC = document.getElementById("label-c");
 const radioC = document.getElementById("resposta-c");
 const labelD = document.getElementById("label-d");
 const radioD = document.getElementById("resposta-d");
+const quiz = document.getElementsByName("quiz");
 const btnProximo = document.getElementById("quiz-proximo");
-const quizEnchentes = [
+const btnVoltar = document.getElementById("quiz-anterior");
+let quizEnchentes = [
 	{
 		id: 1,
 		pergunta:
@@ -174,6 +176,42 @@ window.addEventListener("scroll", () => {
 	}
 });
 
+btnProximo.addEventListener("click", (e) => {
+	e.preventDefault();
+	proximaPergunta();
+});
+btnVoltar.addEventListener("click", (e) => {
+	e.preventDefault();
+	voltarPergunta();
+});
+function voltarPergunta() {
+	perguntaAtual--;
+	carregarPergunta();
+}
+
+function proximaPergunta() {
+	const isSelecionado = document.querySelector('input[name="quiz"]:checked');
+	if (!isSelecionado) {
+		window.alert("Selecione um resposta!");
+		return;
+	}
+	if (perguntaAtual !== 10) {
+		quizEnchentes = quizEnchentes.map((pergunta) => {
+			if (pergunta.id === perguntaAtual) {
+				return {
+					...pergunta,
+					respostaSelecionada: isSelecionado.value,
+				};
+			} else {
+				return pergunta;
+			}
+		});
+		perguntaAtual++;
+		isSelecionado.checked = false;
+		carregarPergunta();
+	}
+}
+
 function carregarPergunta() {
 	const pergunta = quizEnchentes.find(
 		(pergunta) => pergunta.id === perguntaAtual
@@ -183,4 +221,21 @@ function carregarPergunta() {
 	labelB.innerHTML = "b. " + pergunta.respostas.b;
 	labelC.innerHTML = "c. " + pergunta.respostas.c;
 	labelD.innerHTML = "d. " + pergunta.respostas.d;
+
+	switch (pergunta.respostaSelecionada) {
+		case "a":
+			radioA.checked = true;
+			break;
+		case "b":
+			radioB.checked = true;
+			break;
+		case "c":
+			radioC.checked = true;
+			break;
+		case "b":
+			radioD.checked = true;
+			break;
+		default:
+			break;
+	}
 }
