@@ -792,4 +792,13 @@ footer * {
 		backdrop-filter: none;
 		transition: none;
 	}
+	.copyright {
+		width: 30vw;
+	}
+	footer .container div h2 {
+		font-size: 5vw;
+	}
+	footer .container div * {
+		font-size: 3vw;
+	}
 }
