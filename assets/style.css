@@ -1,0 +1,799 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&display=swap");
+:root {
+	--cor-primaria: #539c3a;
+	--cor-secundaria: #6bb369;
+	--cor-terceira: #a7beae;
+	--cor-quarta: #d5eadb;
+	--cor-cinza-suporte: #2c2c2c;
+}
+html {
+	scroll-behavior: smooth;
+}
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Lato", "sans-serif";
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+ul {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	padding-block: 0.5rem;
+}
+
+ul * {
+	list-style: none;
+	font-style: normal;
+	text-decoration: none;
+	color: white;
+	font-weight: 300;
+}
+header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1;
+}
+p {
+	font-family: "Lato", "sans-serif";
+	font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+	font-weight: 300;
+}
+.inicio {
+	position: relative;
+}
+
+.background {
+	background-image: url("/assets/img/banner.jpg");
+	height: 100%;
+	top: 0;
+	width: 100%;
+	position: absolute;
+	background-size: cover;
+	z-index: -3;
+}
+.degrade-blur {
+	z-index: -1;
+	top: 0;
+	position: absolute;
+	width: 100%;
+	height: 40rem;
+	backdrop-filter: blur(1rem);
+	background-color: rgba(0, 0, 0, 0.5);
+	-webkit-mask-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(rgba(0, 0, 0, 1)),
+		to(rgba(0, 0, 0, 0))
+	);
+}
+.degrade-blur-bottom {
+	z-index: -2;
+	position: absolute;
+	width: 100%;
+	height: 30rem;
+	backdrop-filter: blur(1rem);
+	mask-repeat: no-repeat;
+	mask-size: 100% 100%;
+	background-color: rgba(255, 255, 255, 1);
+	mask-image: linear-gradient(to top, rgb(255, 255, 255), rgba(0, 0, 0, 0));
+	-webkit-mask-size: 300% 50%;
+}
+
+#inicio-1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5rem;
+}
+#inicio-2 {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+#inicio-2 h1 {
+	font-size: 3rem;
+	color: white;
+}
+#inicio-3 {
+	width: 20rem;
+}
+#inicio-3 p {
+	color: white;
+	font-weight: 250;
+	font-size: large;
+}
+button {
+	padding-inline: 2rem;
+	padding-block: 0.4rem;
+	border-radius: 1rem;
+	border: 0;
+	background-color: white;
+	color: var(--cor-primaria);
+	margin-top: 1.5rem;
+}
+button:hover,
+.fechar-dropdown:hover {
+	cursor: pointer;
+	backdrop-filter: blur(1rem);
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: 0.3s;
+	color: white;
+}
+.logo {
+	margin-top: 5rem;
+	width: 35rem;
+}
+.inicio {
+	height: 90dvh;
+	overflow-y: hidden;
+}
+.oproblema {
+	width: 100%;
+}
+.oproblema h1 {
+	background-color: white;
+	margin: -0.5rem;
+	font: "Lexend";
+	font-size: 16vw;
+	white-space: nowrap;
+}
+
+.oproblema .interno {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.oproblema .paragrafos * {
+	text-indent: 2em;
+	font-weight: 300;
+	font-size: x-large;
+	margin-inline: 2rem;
+}
+.oproblema .interno figure {
+	height: 60dvh;
+	width: 100vw;
+	position: relative;
+}
+.oproblema .interno img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	object-fit: cover;
+}
+
+.tecnologias {
+	margin-top: 9rem;
+	margin-inline: 2rem;
+}
+.tecnologias .interno {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.tecnologias h1 {
+	font-family: "Lexend", "sans-serif";
+	font-size: 4rem;
+}
+
+.tecnologias img {
+	max-width: 100%;
+	object-position: center;
+	object-fit: cover;
+}
+.tecnologias p {
+	color: #2c2c2c;
+	font-weight: 300;
+	text-indent: 1.2rem;
+	font-size: 1.2rem;
+	text-align: center;
+}
+.tecnologias .grid {
+	width: 100%;
+	height: 70dvh;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto auto;
+}
+.tecnologias .grid .grid-1 {
+	grid-column: 1 / span 2;
+}
+.tecnologias .grid .grid-2 {
+	grid-column: 1 / 2;
+}
+.tecnologias .grid .grid-3 {
+	grid-column: 2 / 3;
+}
+.tecnologias .grid .grid-4 {
+	display: flex;
+	align-items: center;
+	grid-row: 1/3;
+	grid-column: 3 / 3;
+}
+.tecnologias .grid .grid-5 {
+	grid-column: 1 / 4;
+}
+.tecnologias figure {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.tecnologias figure img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.objetivos h1 {
+	font-size: 4rem;
+}
+.objetivos .titulo {
+	display: flex;
+	width: 100%;
+	justify-content: end;
+}
+.objetivos h2 {
+	color: #6bb369;
+}
+.objetivos figcaption {
+	color: var(--cor-cinza-suporte);
+	font-weight: 300;
+}
+.lista-objetivos ul {
+	display: flex;
+}
+.lista-objetivos ul li {
+}
+
+.lista-objetivos ul li figure {
+	width: 10vw;
+}
+.lista-objetivos ul li figure img {
+	width: 100%;
+}
+
+.objetivos {
+	margin-top: 10rem;
+	margin-inline: 2rem;
+}
+
+.publico {
+	margin-top: 3rem;
+	margin-inline: 2rem;
+	display: flex;
+}
+.publico .imagem figure img {
+	max-width: 100%;
+	position: relative;
+}
+
+.publico p {
+	border-top: solid 0.5px;
+	border-bottom: solid 0.5px;
+	border-right: solid 0.5px;
+	border-radius: 0 1rem 1rem 0;
+	max-width: 40%;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	align-self: end;
+	font-size: clamp(0.2rem, 1.5vw, 2rem);
+	margin-bottom: 0.2vw;
+}
+
+.publico .imagem figure {
+	width: 50vw;
+	border-radius: 2rem 2rem 0;
+}
+.publico .titulo h1 {
+	font-family: "Lexend", "sans-serif";
+	font-size: clamp(1rem, 3.5vw, 3rem);
+}
+.publico .titulo {
+	padding: 1rem;
+	box-sizing: border-box;
+	background-color: white;
+	border-radius: 2rem;
+	position: relative;
+	z-index: 3;
+	margin-right: 30vw;
+	top: 3rem;
+	right: -32vw;
+}
+
+hr {
+	margin-block: 5rem;
+	border-color: #539c3a;
+}
+
+.solucao {
+	margin-inline: 2rem;
+	height: 180dvh;
+	position: relative;
+	overflow-y: hidden;
+}
+
+.solucao h1 {
+	font-size: clamp(3rem, 8vw, 10rem);
+}
+.solucao .titulo {
+	left: 30%;
+	position: absolute;
+}
+.solucao .beneficios {
+	right: 0;
+	top: 4%;
+	color: var(--cor-quarta);
+	position: absolute;
+	z-index: -1;
+}
+.solucao .paragrafo-1 {
+	position: absolute;
+	top: 11%;
+	width: 50%;
+	left: 40vw;
+	font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+/* --- Estilos para o Contêiner do Círculo --- */
+.circulo-container {
+	position: absolute;
+	margin: 10px; /* Espaço entre os círculos */ /* Para que os círculos fiquem lado a lado se houver espaço */
+	vertical-align: top; /* Alinha eles no topo se estiverem lado a lado */
+}
+
+/* --- Estilos para o Elemento que se Torna o Círculo --- */
+.circulo-responsivo {
+	position: relative; /* FUNDAMENTAL: Define este div como a referência para o h1 absoluto */
+	width: 100%; /* Ocupa 100% da largura do .circulo-container */
+	padding-bottom: 100%; /* A MAGIA: Faz a altura ser igual à largura (1:1 proporção) */
+
+	/* Suas propriedades de estilo de círculo originais (ajustadas) */ /* A cor de fundo que você queria para o círculo */
+	border: solid 0.5px #539c3a; /* Ajustando a borda, se você quiser a mesma cor do fundo */
+	border-radius: 50%;
+	overflow: hidden; /* Garante que o conteúdo que transborda seja cortado */
+	box-sizing: border-box; /* Opcional: faz padding e border serem incluídos na width/height */
+}
+
+/* --- Estilos para o Conteúdo (h1) DENTRO do Círculo --- */
+.circulo-responsivo h1 {
+	position: absolute; /* Essencial: Remove o h1 do fluxo para não afetar a altura do pai */
+	width: 100%;
+	height: 100%; /* Ocupa todo o espaço do .circulo-responsivo */
+
+	/* Para centralizar o texto dentro do h1 (que agora preenche o círculo) */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0; /* Remove margem padrão do h1 */
+	padding: 5%; /* Opcional: padding interno para o texto não colar na borda */
+	box-sizing: border-box; /* Inclui padding no width/height do h1 */
+
+	/* Suas propriedades de fonte originais */
+	color: var(
+		--cor-primaria
+	); /* Cor do texto (originalmente era a cor do fundo do círculo) */
+	font-size: clamp(0.8rem, 2vw, 2rem);
+	text-align: center; /* Opcional: garante que o texto dentro do h1 esteja centralizado */
+}
+
+.circulo-1 {
+	width: clamp(50px, 30%, 500px);
+	top: 10%;
+	left: 1%;
+}
+.circulo-2 {
+	width: clamp(50px, 25%, 450px);
+	top: 35%;
+	left: 12%;
+}
+.circulo-3 {
+	width: clamp(50px, 20%, 400px);
+	top: 35%;
+	left: 35%;
+}
+.solucao .imagem {
+	width: 40%;
+	position: absolute;
+	top: 33%;
+	left: 59%;
+}
+.solucao .imagem img {
+	width: 100%;
+}
+.para-voce {
+	top: 60%;
+	position: absolute;
+	color: var(--cor-quarta);
+	z-index: -1;
+}
+.solucao .paragrafo-2 {
+	position: absolute;
+	top: 65%;
+	width: 55%;
+	font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+footer {
+	width: 100%;
+	height: 13rem;
+	align-items: center;
+	background-color: #6bb369;
+	display: flex;
+	justify-content: space-around;
+}
+footer .contato,
+footer .navegue {
+	display: flex;
+	flex-direction: column;
+}
+footer .container {
+	display: flex;
+	gap: 1em;
+}
+
+footer * ul {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+footer * {
+	overflow-y: hidden;
+}
+.fechar-mobile {
+	display: none;
+}
+.open-menu {
+	display: none;
+}
+.li-ver-mais {
+	display: none;
+}
+.dropdown {
+	display: none;
+}
+
+.dropdown {
+	padding: 0;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: white;
+	height: 0dvh;
+	transition: 0.6s;
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+}
+.scrolled {
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(20rem);
+	transition: 0.6s;
+}
+.fechar-dropdown {
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1vw;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	padding-inline: 10px;
+	padding-block: 5px;
+	border-radius: 10px;
+}
+.dropdown {
+	display: flex;
+	flex-direction: column;
+}
+.dropdown * {
+	color: var(--cor-cinza-suporte);
+}
+
+.dropdown-active {
+	height: 70dvh;
+	box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+}
+.fechar-drop {
+	width: 1vw;
+}
+.fechar-drop img {
+	width: 100%;
+}
+.quiz {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.quiz ul {
+	display: flex;
+	flex-direction: column;
+	gap: 1dvh;
+	align-items: center;
+}
+
+@media (max-width: 450px) {
+	.fechar-mobile {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: end;
+		gap: 0.5em;
+	}
+	.fechar-mobile figure {
+		width: 8%;
+	}
+
+	.fechar-mobile img {
+		max-width: 100%;
+	}
+	header nav ul {
+		flex-direction: column;
+		justify-content: baseline;
+		align-items: baseline;
+		gap: 1em;
+	}
+	header nav ul * {
+		color: #2c2c2c;
+	}
+	.open-menu {
+		display: block;
+		width: 8%;
+		background-color: rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(20rem);
+		border-radius: 50%;
+		height: auto;
+		border: none;
+		position: fixed;
+		right: 2em;
+		top: 1em;
+	}
+	.open-menu img {
+		padding: 0.2em;
+		max-width: 100%;
+	}
+	header nav {
+		padding: 0;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 0;
+		background-color: white;
+		height: 100dvh;
+		transition: 0.6s;
+	}
+	.active {
+		width: 40%;
+		padding: 1rem;
+	}
+
+	.fechado {
+		transform: rotate(60deg) scale(0.1);
+		opacity: 0;
+		transition: 0.6s;
+	}
+	#inicio-1 figure {
+		width: 60vw;
+		height: auto;
+		overflow: visible;
+		padding-bottom: 20%;
+		position: relative;
+	}
+
+	.logo {
+		display: block;
+		max-width: 100%;
+		object-fit: contain;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	#inicio-2 {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
+	#inicio-2 h1 {
+		font-size: 2em;
+	}
+	#inicio-2 p {
+		font-size: 1em;
+	}
+	.oproblema h1 {
+		font-size: 16vw;
+	}
+	.oproblema .interno .paragrafos p {
+		font-size: 1em;
+	}
+
+	.oproblema .interno figure img {
+		max-width: 100%;
+		object-fit: cover;
+	}
+	.oproblema .interno figure {
+		width: 100vw;
+	}
+	.tecnologias {
+		margin-top: 2rem;
+		margin-inline: 0;
+	}
+	.tecnologias h1 {
+		font-size: 10vw;
+	}
+	.tecnologias p {
+		font-size: 4vw;
+		padding-inline: 4vw;
+	}
+
+	.p1,
+	.p2 {
+		display: none;
+		width: 0;
+		height: 0;
+	}
+
+	.li-ver-mais {
+		display: block;
+	}
+	#btn-ver-mais {
+		border: solid var(--cor-secundaria) 1px;
+		border-radius: 1rem;
+		padding: 0.5em 2em;
+		background-color: white;
+	}
+	.objetivos {
+		margin-top: 3rem;
+	}
+	.objetivos .titulo h1 {
+		font-size: 10vw;
+	}
+	.objetivos .titulo h2 {
+		font-size: 5vw;
+	}
+	.lista-objetivos ul {
+		flex-direction: column;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		gap: 5dvh;
+		align-items: center;
+	}
+	.lista-objetivos ul li figure {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		height: 10dvh;
+	}
+	.lista-objetivos ul li figure figcaption {
+		font-size: 3vw;
+	}
+	.publico {
+		display: flex;
+		align-items: center;
+	}
+	.publico .imagem figure img {
+		max-width: 100%;
+		position: relative;
+	}
+
+	.publico p {
+		padding: 1rem;
+		border-top: solid 0.5px;
+		border-bottom: solid 0.5px;
+		border-right: solid 0.5px;
+		border-radius: 0 1rem 1rem 0;
+		max-width: 40%;
+		height: fit-content;
+		display: flex;
+		align-items: center;
+		align-self: end;
+		font-size: clamp(0.2rem, 1.5vw, 2rem);
+		margin-bottom: 0.2vw;
+	}
+
+	.publico .imagem figure {
+		width: 50vw;
+		border-radius: 2rem 2rem 0 2rem;
+	}
+	.publico .titulo h1 {
+		font-family: "Lexend", "sans-serif";
+		font-size: clamp(2rem, 3vw, 4rem);
+	}
+
+	.publico .titulo {
+		padding: 1rem;
+		background-color: white;
+		border-radius: 2rem 0 0 2rem;
+		position: inherit;
+		z-index: 3;
+		width: 100%;
+		margin-right: 30vw;
+		top: 3rem;
+		right: -32vw;
+	}
+	.solucao .titulo {
+		left: 22vw;
+	}
+	.solucao {
+		margin-inline: 0;
+		height: 40rem;
+	}
+	.solucao .beneficios {
+		top: 2rem;
+	}
+	.solucao .paragrafo-1 {
+		top: 15dvh;
+	}
+	.solucao .solucao-frases {
+		margin-top: 13dvh;
+		display: flex;
+		flex-direction: column;
+		gap: 3dvh;
+		margin-left: 2rem;
+		align-items: start;
+	}
+	.circulo-container {
+		position: inherit;
+		margin: 0;
+	}
+
+	/* --- Estilos para o Elemento que se Torna o Círculo --- */
+	.circulo-responsivo {
+		position: inherit; /* FUNDAMENTAL: Define este div como a referência para o h1 absoluto */
+		width: 100%; /* Ocupa 100% da largura do .circulo-container */
+		padding-bottom: 0; /* A MAGIA: Faz a altura ser igual à largura (1:1 proporção) */
+
+		/* Suas propriedades de estilo de círculo originais (ajustadas) */ /* A cor de fundo que você queria para o círculo */
+		border: 0; /* Ajustando a borda, se você quiser a mesma cor do fundo */
+		border-radius: 0;
+		overflow: auto; /* Garante que o conteúdo que transborda seja cortado */
+		box-sizing: border-box; /* Opcional: faz padding e border serem incluídos na width/height */
+	}
+
+	/* --- Estilos para o Conteúdo (h1) DENTRO do Círculo --- */
+	.circulo-responsivo h1 {
+		position: inherit;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0; /* Remove margem padrão do h1 */
+		padding: 0; /* Opcional: padding interno para o texto não colar na borda */
+		box-sizing: border-box;
+		text-align: left;
+		color: var(
+			--cor-primaria
+		); /* Cor do texto (originalmente era a cor do fundo do círculo) */
+		font-size: clamp(0.8rem, 2vw, 2rem);
+	}
+	.solucao .imagem {
+		top: 44dvh;
+		left: 50%;
+	}
+	.solucao .para-voce {
+		font-size: 7vw;
+		margin-left: 2rem;
+	}
+	.solucao .paragrafo-2 {
+		width: 43%;
+		margin-left: 2rem;
+	}
+	.scrolled {
+		background-color: rgba(255, 255, 255, 0.5);
+		backdrop-filter: none;
+		transition: none;
+	}
+	.copyright {
+		width: 30vw;
+	}
+	footer .container div h2 {
+		font-size: 5vw;
+	}
+	footer .container div * {
+		font-size: 3vw;
+	}
+}
